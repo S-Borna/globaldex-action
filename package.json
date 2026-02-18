@@ -1,0 +1,1 @@
+{"name":"globaldex-action","version":"1.0.0","type":"module","description":"GitHub Action for GlobalDex AI agent readiness scanning","main":"index.mjs","license":"MIT","homepage":"https://globaldex.ai","repository":{"type":"git","url":"https://github.com/S-Borna/globaldex-action"},"keywords":["github-action","ai","agent","readiness","webmcp","scanner"]}

@@ -1,0 +1,42 @@
+name: "AgentReady Scanner"
+description: "Scan your website for AI agent readiness. Checks WebMCP, structured data, metadata, accessibility, and discoverability."
+author: "S-Borna"
+
+branding:
+  icon: "shield"
+  color: "purple"
+
+inputs:
+  url:
+    description: "The URL to scan"
+    required: true
+  threshold:
+    description: "Minimum score to pass (0-100). Fails the step if score is below."
+    required: false
+    default: "0"
+  api-key:
+    description: "AgentReady API key for higher rate limits"
+    required: false
+    default: ""
+  api-url:
+    description: "Custom API base URL"
+    required: false
+    default: "https://agentready.saidborna.com"
+
+outputs:
+  score:
+    description: "Agent-readiness score (0-100)"
+  grade:
+    description: "Letter grade (A-F)"
+  has-webmcp:
+    description: "Whether the site has WebMCP support"
+  checks-passed:
+    description: "Number of checks passed"
+  checks-total:
+    description: "Total number of checks"
+  result-json:
+    description: "Full scan result as JSON"
+
+runs:
+  using: "node20"
+  main: "action/index.mjs"
