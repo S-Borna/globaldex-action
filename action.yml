@@ -39,4 +39,4 @@ outputs:
 
 runs:
   using: "node20"
-  main: "action/index.mjs"
+  main: "index.mjs"
